@@ -1,0 +1,38 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block style %}
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-image: url('{% static "image/11.png" %}'); /* Обратите внимание на кавычки внутри static */
+                background-color: #121212;
+                background-size: cover;
+                background-attachment: fixed;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+            .content-container {
+                width: fit-content;
+                height: fit-content;
+           }
+        </style>
+    {% endblock style %}
+{% block content %}
+<section>
+<div class="content-container">
+    <h2>Заполните поле!!!</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% for image_form in image_forms %}
+                {{ image_form.as_p }}
+            {% endfor %}
+            <input type="submit" value="Submit">
+        </form>
+</div>
+    <br>
+    <br>
+    </section>
+{% endblock content %}

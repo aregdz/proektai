@@ -1,0 +1,83 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block style %}
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-image: url('{% static "image/11.png" %}'); /* Обратите внимание на кавычки внутри static */
+                background-color: #121212;
+                background-size: cover;
+                background-attachment: fixed;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+            .content-container {
+                width: fit-content;
+                height: fit-content;
+           }
+            .contact-section {
+            margin: 20px 0;
+        }
+        .contact-section h2 {
+            color: #333;
+        }
+        .contact-section a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+        .contact-section .contact-item {
+            margin: 10px 0;
+        }
+        .contact-section .icon {
+            margin-right: 8px;
+        }
+        </style>
+    {% endblock style %}
+{% block content %}
+<section>
+<div class="content-container">
+<div class="contact-section" id="cooperation">
+        <h1>🤝 Сотрудничество</h1>
+
+        <p class="contact-item">
+            <span class="icon">📞</span>
+            Телефон: <a href="tel:+89288295981">8 928 829 59 81</a>
+        </p>
+        <p class="contact-item">
+            <span class="icon">📧</span>
+            E-mail: <a href="mailto:areg.dzhatayan@bk.ru">areg.dzhatayan@bk.ru</a>
+        </p>
+        <p class="contact-item">
+            <span class="icon">✈️</span>
+            Telegram: <a href="tg://resolve?domain=yourusername">Написать в Telegram</a>
+        </p>
+    </div>
+
+    <div class="contact-section" id="support">
+        <h1>💁 Поддержка и помощь</h1>
+
+        <p class="contact-item">
+            <span class="icon">📞</span>
+            Телефон для запросов помощи: <a href="tel:+89288295981">8 928 829 59 81</a>
+        </p>
+        <p class="contact-item">
+            <span class="icon">📧</span>
+            E-mail для поддержки: <a href="mailto:support@example.com">support@example.com</a>
+        </p>
+        <p class="contact-item">
+            <span class="icon">👥</span>
+            ВКонтакте: <a href="https://vk.com/yourusername">Профиль ВКонтакте</a>
+        </p>
+    </div>
+</div>
+    <br>
+    <br>
+    </section>
+
+
+{% endblock content %}

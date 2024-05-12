@@ -1,0 +1,31 @@
+{% extends "main/base.html" %}
+{% load static %}
+    {% block style %}
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-image: url('{% static "image/11.png" %}'); /* Обратите внимание на кавычки внутри static */
+                background-color: #121212;
+                background-size: cover;
+                background-attachment: fixed;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+        </style>
+    {% endblock style %}
+
+    {% block content %}
+    <section>
+    <div class="content-container">
+        <h2>Добро пожаловать на EvalAI!</h2>
+        <p>Мы изучаем и развиваем изящные решения на основе искусственного интеллекта для множества задач.</p>
+    </div>
+    <br>
+    <div class="content-container">
+        <h2>Не теряй времени, скорее жми кнопку!!!</h2>
+        <a href="{% url 'forms' %}" class="start-btn">Начать работу</a>
+    </div>
+        </section>
+    {% endblock content %}

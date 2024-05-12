@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+{% load static %}
+ {% block style %}
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-image: url('{% static "image/11.png" %}'); /* Обратите внимание на кавычки внутри static */
+                background-color: #121212;
+                background-size: cover;
+                background-attachment: fixed;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+            .content-container {
+                width: fit-content;
+                height: fit-content;
+           }
+        </style>
+    {% endblock style %}
+{% block content %}
+<section>
+    <div class="content-container">
+        <P>Ваши результаты теперь готовы, и мы благодарим вас за то, что вы с нами! Вы можете скачать их, просто нажав на ссылку ниже. <p> Мы надеемся, что предоставленная информация окажется полезной для вас, и ждем вас снова за новыми данными!</P>
+        {% if excel_file_name %}
+        <a href="{% url 'download_excel' file_name=excel_file_name %}">Скачать Excel файл</a>
+        {% else %}
+        <p>Файл ещё не был создан.</p>
+        {% endif %}
+    </div>
+</section>
+    {% endblock content %}

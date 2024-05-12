@@ -1,0 +1,98 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block style %}
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('{% static "image/11.png" %}');
+            background-color: #121212;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .step {
+            width: 80%;
+            padding: 20px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            border: 2px solid #000; /* черная рамка */
+            border-radius: 5px;
+            background-color: rgba(255, 192, 203, 0.7); /* розоватый цвет с прозрачностью */
+            overflow: hidden;
+        }
+
+        .step img {
+            float: left;
+            margin-right: 20px;
+            width: 600px; /* ограничение размера изображений */
+            height: auto;
+            border: 3px solid #000; /* черная рамка для изображений */
+        }
+
+        .step-content {
+            overflow: hidden;
+        }
+
+        h2 {
+            color: #FF0000; /* яркий красный цвет заголовка */
+            font-weight: bold; /* жирный текст */
+        }
+
+        p {
+            color: #000; /* черный цвет текста */
+            font-weight: bold; /* жирный текст */
+            font-size: 18px; /* большой размер шрифта */
+        }
+
+        h3 {
+            color: #FFFF00; /* желтый цвет текста */
+            font-weight: bold; /* жирный текст */
+            font-size: 30px; /* размер шрифта */
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+<section>
+    <div class="step">
+        <img src="{% static 'image/step.png' %}" alt="Шаг 1">
+        <div class="step-content">
+            <h3>Шаг 1: Главная страница</h3>
+            <p>Нажмите на зеленую кнопку "Начать работу", чтобы приступить к действию.</p>
+        </div>
+    </div>
+    <div class="step">
+        <img src="{% static 'image/step1.png' %}" alt="Шаг 2">
+        <div class="step-content">
+            <h3>Шаг 2: Страница загрузки данных</h3>
+            <p>Заполните все необходимые поля!</p>
+        </div>
+    </div>
+    <div class="step">
+        <img src="{% static 'image/step2.png' %}" alt="Шаг 3">
+        <div class="step-content">
+            <h3>Шаг 3: Начало загрузки </h3>
+            <p>Нажмите на кнопку "отправить" и дождитесь загрузки!</p>
+        </div>
+    </div>
+    <div class="step">
+        <img src="{% static 'image/step3.png' %}" alt="Шаг 4">
+        <div class="step-content">
+            <h3>Шаг 4: Получение результатов</h3>
+            <p>Скачайте файл, по ссылке на странице.</p>
+        </div>
+    </div>
+    <div class="step">
+        <img src="{% static 'image/step4.png' %}" alt="Шаг 5">
+        <div class="step-content">
+            <h3>Шаг 5: Работа с файлом</h3>
+            <p>Файл "Результаты_тестирования.xlsx" содержит информацию о вашем тестировании. В нем вы найдете следующие данные: </p>
+            <p>ФИО студента, оценки студентов и много другое!!! </p>
+            <p>Этот файл поможет вам оценить знания студентов и успехи в прохождении теста. Вы можете использовать его для отслеживания прогресса и анализа результатов.</p>
+        </div>
+    </div>
+</section>
+{% endblock content %}
